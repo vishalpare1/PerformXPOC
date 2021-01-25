@@ -1,10 +1,39 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
+
+import { BreadCrumbItem } from '@progress/kendo-angular-navigation';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  encapsulation: ViewEncapsulation.None,
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
   title = 'performXPOC';
+  public kendokaAvatar =
+    'https://www.telerik.com/kendo-angular-ui-develop/components/navigation/appbar/assets/kendoka-angular.png';
+
+  public items: BreadCrumbItem[] = [
+    {
+      text: 'Home',
+      title: 'Home',
+      icon: 'home',
+    },
+    {
+      text: 'Products',
+      title: 'Products',
+    },
+    {
+      text: 'Computer peripherals',
+      title: 'Computer peripherals',
+    },
+    {
+      text: 'Keyboards',
+      title: 'Keyboards',
+    },
+    {
+      text: 'Gaming keyboards',
+      title: 'Gaming keyboards',
+    },
+  ];
 }

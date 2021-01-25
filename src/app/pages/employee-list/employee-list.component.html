@@ -1,0 +1,29 @@
+<div class="employee-list">
+  <div class="grid-wrapper">
+    <kendo-grid
+      [kendoGridBinding]="gridData"
+      [height]="600"
+      [sortable]="true"
+      [pageable]="true"
+      [filterable]="true"
+      [pageSize]="10"
+      [groupable]="true"
+    >
+      <kendo-grid-column field="id" title="ID" width="40"> </kendo-grid-column>
+      <kendo-grid-column field="firstName" title="First Name">
+      </kendo-grid-column>
+      <kendo-grid-column field="lastName" title="Last Name">
+      </kendo-grid-column>
+      <kendo-grid-column field="email" title="Email"> </kendo-grid-column>
+      <kendo-grid-column field="birthDate" title="Birth Date">
+        <ng-template kendoGridCellTemplate let-dataItem>
+          {{ dataItem.birthDate | date }}
+        </ng-template>
+      </kendo-grid-column>
+      <kendo-grid-column field="designation" title="Designation">
+      </kendo-grid-column>
+      <kendo-grid-column field="skills" title="Skills"> </kendo-grid-column>
+    </kendo-grid>
+  </div>
+</div>
+<div></div>

@@ -1,0 +1,22 @@
+{
+  "employee": [
+    {
+      "firstName": "Vishal",
+      "lastName": "Pare",
+      "birthDate": "2000-11-09T18:30:00.000Z",
+      "email": "vishapare0293@gmail.com",
+      "designation": "Lead Software Engineer",
+      "skills": ["Html5", "CSS", "Javascript", "Jquery"],
+      "id": 1
+    },
+    {
+      "firstName": "Rahul",
+      "lastName": "Rajabhoj",
+      "birthDate": "2000-11-09T18:30:00.000Z",
+      "email": "rahul_raja@persistent.com",
+      "designation": "Lead Software Engineer",
+      "skills": ["Html5", "Angular"],
+      "id": 2
+    }
+  ]
+}

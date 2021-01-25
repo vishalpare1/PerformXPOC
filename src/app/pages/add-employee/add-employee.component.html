@@ -1,0 +1,111 @@
+<div class="example-wrap">
+  <form class="k-form" [formGroup]="registerForm">
+    <fieldset class="k-form-fieldset">
+      <div class="grid-x grid-padding-x">
+        <legend class="cell small-12 k-form-legend">Employee Details</legend>
+      </div>
+      <div class="grid-x grid-padding-x">
+        <div class="cell small-12 medium-6 large-6">
+          <kendo-formfield>
+            <kendo-label [for]="firstName" text="First Name"></kendo-label>
+            <input
+              formControlName="firstName"
+              kendoTextBox
+              #firstName
+              required
+            />
+
+            <kendo-formhint>Your first name</kendo-formhint>
+            <kendo-formerror>Error: First name is required</kendo-formerror>
+          </kendo-formfield>
+        </div>
+        <div class="cell small-12 medium-6 large-6">
+          <kendo-formfield>
+            <kendo-label [for]="lastName" text="Last Name"></kendo-label>
+            <input formControlName="lastName" kendoTextBox #lastName required />
+
+            <kendo-formhint>Your last name</kendo-formhint>
+            <kendo-formerror>Error: Last name is required</kendo-formerror>
+          </kendo-formfield>
+        </div>
+      </div>
+
+      <div class="grid-x grid-padding-x">
+        <div class="cell small-12 medium-6 large-6">
+          <kendo-formfield>
+            <kendo-label [for]="birthDate" text="Birth Date"></kendo-label>
+            <kendo-datepicker
+              #birthDate
+              formControlName="birthDate"
+              [min]="min"
+              [max]="max"
+              required
+            >
+            </kendo-datepicker>
+
+            <kendo-formhint>Your birth date</kendo-formhint>
+            <kendo-formerror
+              >Error: Not valid birth date format</kendo-formerror
+            >
+          </kendo-formfield>
+        </div>
+        <div class="cell small-12 medium-6 large-6">
+          <kendo-formfield>
+            <kendo-label [for]="email" text="Email"></kendo-label>
+            <input formControlName="email" kendoTextBox #email required />
+
+            <kendo-formhint>Your active email</kendo-formhint>
+            <kendo-formerror>Error: Not valid email format</kendo-formerror>
+          </kendo-formfield>
+        </div>
+      </div>
+
+      <div class="grid-x grid-padding-x">
+        <div class="cell small-12 medium-6 large-6">
+          <kendo-formfield>
+            <kendo-label [for]="designation" text="Designation"></kendo-label>
+            <kendo-dropdownlist
+              [data]="designationList"
+              formControlName="designation"
+              #designation
+              required
+            >
+            </kendo-dropdownlist>
+
+            <kendo-formhint>Employee Designation</kendo-formhint>
+            <kendo-formerror
+              >Error: Employee designation is required</kendo-formerror
+            >
+          </kendo-formfield>
+        </div>
+        <div class="cell small-12 medium-6 large-6">
+          <kendo-formfield>
+            <kendo-label [for]="skills" text="Skills"></kendo-label>
+            <kendo-multiselect
+              [data]="skillList"
+              formControlName="skills"
+              #skills
+              required
+            ></kendo-multiselect>
+
+            <kendo-formhint>Employee Skills</kendo-formhint>
+            <kendo-formerror
+              >Error: Employee skills are required</kendo-formerror
+            >
+          </kendo-formfield>
+        </div>
+      </div>
+
+      <div class="grid-x grid-padding-x">
+        <div class="cell small-12">
+          <div class="k-form-buttons">
+            <button class="k-button k-primary" (click)="submitForm()">
+              Submit
+            </button>
+            <button class="k-button" (click)="clearForm()">Clear</button>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </form>
+</div>
